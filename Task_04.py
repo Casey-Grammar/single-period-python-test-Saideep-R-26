@@ -18,6 +18,19 @@
 
 def expand_subject_codes(codes):
     # Write your code here
+    subject_map = {
+        "ENG": "English",
+        "MAT": "Mathematics",
+        "SCI": "Science",
+        "HIS": "History",
+        "ART": "Art"
+    }
+    expanded_subjects = []
+    for sub in codes:
+        subU = sub.upper()
+        if subU in subject_map:
+            expanded_subjects.append(subject_map[subU])
+    return expanded_subjects
     pass
 
 
